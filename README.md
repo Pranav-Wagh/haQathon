@@ -1,4 +1,4 @@
-# 🎤 AI Presentation Feedback Assistant (Offline – Qualcomm Hackathon)
+# 🎤 PresentPerfect: AI-Driven Insights for Mastering Effective Presentations and Public Speaking
 
 This project is an offline AI-powered tool that helps users **improve their presentation skills** by analyzing their **transcript**, **facial expressions**, and **vocal features**. Built using the **Phi-2 LLM** from Hugging Face, the application runs entirely **offline on a Snapdragon X Elite laptop** (no internet required after model download).
 
