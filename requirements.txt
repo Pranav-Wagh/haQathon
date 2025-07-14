@@ -13,3 +13,5 @@ transformers
 ffmpeg
 ffmpeg-python
 python-tk
+pyimage2
+subprocess
