@@ -21,11 +21,6 @@ This project is an offline AI-powered tool that helps users **improve their pres
 - Detects facial emotions using `ResNet + LSTM`
 - Records mood data every 5 seconds → saves to `video_logging.txt`
 
-### 2. `audio_logger.py`
-- Analyzes microphone input
-- Extracts pitch, confidence, clarity, volume, etc.
-- Saves summary in `audio_logging.txt`
-
 ### 3. `transcript.txt`
 - User-written presentation script, paragraph style
 
