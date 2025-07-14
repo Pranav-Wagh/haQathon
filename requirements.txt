@@ -1,0 +1,15 @@
+opencv-python
+mediapipe
+numpy
+torch
+torchvision
+Pillow
+tk
+pyaudio
+matplotlib
+soundfile
+librosa
+transformers
+ffmpeg
+ffmpeg-python
+python-tk
