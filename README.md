@@ -1,6 +1,6 @@
 # 🎤 AI Presentation Feedback Assistant (Offline – Qualcomm Hackathon)
 
-This project is an offline AI-powered tool that helps users **improve their presentation skills** by analyzing their **transcript**, **facial expressions**, and **vocal features**. Built using the **Phi-2 LLM** from Hugging Face, the application runs entirely **offline on a Snapdragon X Elite laptop** (no internet required).
+This project is an offline AI-powered tool that helps users **improve their presentation skills** by analyzing their **transcript**, **facial expressions**, and **vocal features**. Built using the **Phi-2 LLM** from Hugging Face, the application runs entirely **offline on a Snapdragon X Elite laptop** (no internet required after model download).
 
 ---
 
@@ -36,17 +36,34 @@ This project is an offline AI-powered tool that helps users **improve their pres
 
 ---
 
-## 🧪 Model Used
+## 🤖 Model: Phi-2 (from Hugging Face)
 
-### 🤖 `phi-2` (from Hugging Face)
-- Parameters: ~2.7B
-- License: MIT (commercial use allowed)
-- Offline-compatible: ✅
-- Ideal for: reasoning, instruction following, summarization
+| Name         | microsoft/phi-2 |
+|--------------|------------------|
+| Parameters   | ~2.7B            |
+| License      | MIT              |
+| Offline Use  | ✅ Yes           |
+| File Size    | ~1.7 GB          |
 
-> You can download the model via Hugging Face and use it with `transformers`:
-```python
+---
+
+## 📦 How to Download the Model Locally
+
+1. Create a local folder to store the model:
+   ```bash
+   mkdir phi-2-local
+
+Download the model using Hugging Face's transformers (only once with internet):
+
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model = AutoModelForCausalLM.from_pretrained("microsoft/phi-2", torch_dtype=torch.float16)
+model = AutoModelForCausalLM.from_pretrained("microsoft/phi-2")
 tokenizer = AutoTokenizer.from_pretrained("microsoft/phi-2")
+
+model.save_pretrained("phi-2-local")
+tokenizer.save_pretrained("phi-2-local")
+
+Update generate_report.py:
+
+model = AutoModelForCausalLM.from_pretrained("phi-2-local", torch_dtype=torch.float16)
+tokenizer = AutoTokenizer.from_pretrained("phi-2-local")
