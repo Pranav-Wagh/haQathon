@@ -15,3 +15,5 @@ ffmpeg-python
 python-tk
 pyimage2
 subprocess
+onnxruntime-qnn
+pathlib
