@@ -23,6 +23,7 @@ This project is an offline AI-powered tool that helps users **improve their pres
 
 ### 3. `transcript.txt`
 - User-written presentation script, paragraph style
+- The user must upload the transcript with the name `transcript.txt`
 
 ### 4. `generate_report.py`
 - Loads the three files above
@@ -62,3 +63,8 @@ Update generate_report.py:
 
 model = AutoModelForCausalLM.from_pretrained("phi-2-local", torch_dtype=torch.float16)
 tokenizer = AutoTokenizer.from_pretrained("phi-2-local")
+
+NOTE:
+This has not been tested on virtual environment
+
+
